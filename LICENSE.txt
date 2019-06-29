@@ -1,1 +1,16 @@
 fgfg
+mv /mnt/hgfs/share/jdk-8u211-linux-x64.tar.gz /opt/java/
+tar -zxvf jdk-8u211-linux-x64.tar.gz
+wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.13-1_all.deb
+sudo dpkg -i mysql-apt-config_0.8.13-1_all.deb
+sudo apt-get install mysql-server
+https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-8/v8.5.42/bin/
+mv /mnt/hgfs/share/apache-tomcat-8.5.42.tar.gz /opt/tomcat/
+cd /opt/tomcat/apache-tomcat-8.5.42/bin && ls
+
+
+export JAVA_HOME=/opt/Java
+export JRE_HOME=${JAVA_HOME}/jre
+export PATH=${JAVA_HOME}/bin:${JRE_HOME}:$PATH
+export CLASSPATH=.:${JRE_HOME}/lib/rt.jar:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar 
+export TOMCAT_HOME=/opt/tomcat/apache-tomcat-8.5.42
